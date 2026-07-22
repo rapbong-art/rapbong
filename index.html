@@ -38,18 +38,21 @@
             padding-bottom: 25px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: flex-start; /* 헤더 내부 전체 좌측 정렬 */
         }
 
+        /* 로고 컨테이너 및 이미지 좌측 정렬 강화 */
         .logo-container {
-            display: block;
-            margin-bottom: 8px;
+            display: inline-block;
+            margin-bottom: 12px;
+            text-align: left;
         }
 
         .logo-container img {
-            height: 120px;
+            height: 110px; /* 로고 크기 */
             width: auto;
             display: block;
+            margin: 0; /* 중앙 여백 제거 및 완벽한 좌측 정렬 */
         }
 
         .header-sub-row {
@@ -71,7 +74,7 @@
         .header-links {
             display: flex;
             align-items: center;
-            gap: 18px; /* 아이콘 간격 조정 */
+            gap: 18px;
         }
 
         .header-links a {
@@ -180,6 +183,13 @@
             line-height: 1.6;
         }
 
+        .artist-name-kr {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 4px;
+        }
+
         .exhibition-item {
             margin-bottom: 16px;
         }
@@ -250,8 +260,8 @@
                 <a href="https://www.instagram.com/rapbong" target="_blank" title="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <!-- 사운드클라우드 (추가됨) -->
-                <a href="https://soundcloud.com/your_soundcloud" target="_blank" title="SoundCloud">
+                <!-- 사운드클라우드 (실제 주소 적용 완료) -->
+                <a href="https://soundcloud.com/rapbong-k" target="_blank" title="SoundCloud">
                     <i class="fa-brands fa-soundcloud"></i>
                 </a>
                 <!-- 이메일 -->
@@ -263,6 +273,7 @@
     </header>
 
     <div class="main-container">
+        <!-- 메인 좌측: WORKS ARCHIVE -->
         <main class="works-section">
             <h2 class="section-title">Selected Works</h2>
 
@@ -287,14 +298,16 @@
             </div>
         </main>
 
+        <!-- 우측 사이드바: ABOUT & INFO -->
         <aside class="sidebar">
             <div class="sidebar-sticky-wrapper">
                 
                 <div class="side-block">
                     <h2 class="section-title">About</h2>
+                    <div class="artist-name-kr">김래현 (Kim Rae-hyun)</div>
                     <p>
-                        RAPBONG is a visual artist and media maker based in Seoul.<br>
-                        Focusing on painting, motion graphics, and experimental media.
+                        Visual artist based in Seoul, Korea.<br>
+                        Working across Painting, Motion Graphics, and Media Art.
                     </p>
                 </div>
 
@@ -303,8 +316,8 @@
                     
                     <div class="exhibition-item">
                         <span class="badge">UPCOMING</span>
-                        <h4>Upcoming Solo Exhibition / Public Art</h4>
-                        <p>2026 / Location TBD</p>
+                        <h4>Solo Exhibition / Public Project</h4>
+                        <p>2026 / Seoul</p>
                     </div>
 
                     <div class="exhibition-item" style="margin-top: 15px;">
@@ -315,10 +328,12 @@
                 </div>
 
                 <div class="side-block">
-                    <h2 class="section-title">Text & Notes</h2>
+                    <h2 class="section-title">Portfolio Dossier</h2>
                     <p style="font-size: 0.8rem;">
-                        <a href="#" style="color: var(--text-color); text-decoration: underline;">Artist Statement (PDF)</a><br>
-                        <a href="#" style="color: var(--text-color); text-decoration: underline;">Work Process Notes</a>
+                        Full Artist Statement, CV, and detailed Portfolio PDF available upon request.<br><br>
+                        <a href="mailto:rapbong.k@gmail.com?subject=RAPBONG%20Portfolio%20Request" style="color: var(--text-color); font-weight: 600; text-decoration: underline;">
+                            Request Portfolio (PDF) ✉️
+                        </a>
                     </p>
                 </div>
 
