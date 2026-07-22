@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAPBONG | Portfolio</title>
+    <!-- 그레이톤 아이콘 사용을 위한 FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             --bg-color: #ffffff;
             --text-color: #111111;
             --sub-color: #666666;
+            --icon-color: #888888;
             --border-color: #eeeeee;
             --card-bg: #fbfbfb;
         }
@@ -35,19 +38,19 @@
             padding-bottom: 25px;
         }
 
-        /* 로고 이미지 스타일 (기존 대비 1.5배) */
+        /* 로고 이미지 스타일 */
         .logo-container {
             display: inline-block;
             margin-bottom: 6px;
         }
 
         .logo-container img {
-            height: 120px; /* 1.5배 확대 */
+            height: 120px;
             width: auto;
             display: block;
         }
 
-        /* 상단 서브 헤더 (서브타이틀 + 우측 링크 정렬) */
+        /* 상단 서브 헤더 (서브타이틀 + 우측 그레이톤 아이콘) */
         .header-sub-row {
             display: flex;
             justify-content: space-between;
@@ -63,17 +66,21 @@
             margin: 0;
         }
 
+        .header-links {
+            display: flex;
+            align-items: center;
+            gap: 16px; /* 아이콘 간격 */
+        }
+
         .header-links a {
-            color: var(--text-color);
+            color: var(--icon-color);
+            font-size: 1.15rem; /* 아이콘 크기 */
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.85rem;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s;
+            transition: color 0.2s ease;
         }
 
         .header-links a:hover {
-            border-bottom-color: var(--text-color);
+            color: var(--text-color); /* 마우스 올렸을 때 어두워짐 */
         }
 
         section {
@@ -185,8 +192,12 @@
         <div class="header-sub-row">
             <p class="subtitle">Archive & Media Portfolio</p>
             <div class="header-links">
-                <a href="https://www.instagram.com/rapbong" target="_blank">Instagram</a>
-                <a href="mailto:rapbong.k@gmail.com">Contact Email</a>
+                <a href="https://www.instagram.com/rapbong" target="_blank" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:rapbong.k@gmail.com" title="Contact Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
             </div>
         </div>
     </header>
