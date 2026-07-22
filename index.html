@@ -35,23 +35,45 @@
             padding-bottom: 25px;
         }
 
-        /* 로고 이미지 및 간격 스타일 */
+        /* 로고 이미지 스타일 (기존 대비 1.5배) */
         .logo-container {
             display: inline-block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .logo-container img {
-            height: 80px;
+            height: 120px; /* 1.5배 확대 */
             width: auto;
             display: block;
+        }
+
+        /* 상단 서브 헤더 (서브타이틀 + 우측 링크 정렬) */
+        .header-sub-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         p.subtitle {
             color: var(--sub-color);
             font-size: 0.85rem;
             letter-spacing: 0.5px;
-            margin-top: 0;
+            margin: 0;
+        }
+
+        .header-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .header-links a:hover {
+            border-bottom-color: var(--text-color);
         }
 
         section {
@@ -143,23 +165,8 @@
             border-top: 1px solid var(--border-color);
             padding-top: 30px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin-right: 20px;
-            font-size: 0.85rem;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s;
-        }
-
-        .social-links a:hover {
-            border-bottom-color: var(--text-color);
         }
 
         .copyright {
@@ -175,7 +182,13 @@
         <a href="/" class="logo-container">
             <img src="logo.png" alt="RAPBONG Logo">
         </a>
-        <p class="subtitle">Archive & Media Portfolio</p>
+        <div class="header-sub-row">
+            <p class="subtitle">Archive & Media Portfolio</p>
+            <div class="header-links">
+                <a href="https://www.instagram.com/rapbong" target="_blank">Instagram</a>
+                <a href="mailto:rapbong.k@gmail.com">Contact Email</a>
+            </div>
+        </div>
     </header>
 
     <section>
@@ -213,10 +226,6 @@
     </section>
 
     <footer>
-        <div class="social-links">
-            <a href="https://instagram.com/your_instagram" target="_blank">Instagram</a>
-            <a href="mailto:your_email@gmail.com">Contact Email</a>
-        </div>
         <div class="copyright">
             Copyright © 2026 RAPBONG Official. All rights reserved.
         </div>
