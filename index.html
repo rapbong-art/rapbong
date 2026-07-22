@@ -6,11 +6,11 @@
     <title>RAPBONG | Official Portfolio</title>
     <style>
         :root {
-            --bg-color: #0d0d0d;
-            --text-color: #f0f0f0;
-            --sub-color: #888888;
-            --accent-color: #ffffff;
-            --border-color: #222222;
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --sub-color: #666666;
+            --border-color: #eeeeee;
+            --card-bg: #fbfbfb;
         }
 
         * {
@@ -30,22 +30,27 @@
         }
 
         header {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
+            padding-bottom: 25px;
         }
 
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        /* 로고 이미지 스타일 */
+        .logo-container {
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .logo-container img {
+            height: 36px; /* 로고 높이 조절 (필요시 숫자 변경 가능) */
+            width: auto;
+            display: block;
         }
 
         p.subtitle {
             color: var(--sub-color);
-            font-size: 0.9rem;
-            margin-top: 5px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
         }
 
         section {
@@ -53,12 +58,12 @@
         }
 
         h2.section-title {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2.5px;
             color: var(--sub-color);
             margin-bottom: 25px;
-            border-left: 2px solid var(--accent-color);
+            border-left: 2px solid var(--text-color);
             padding-left: 10px;
         }
 
@@ -69,10 +74,10 @@
         }
 
         .work-item {
-            background: #121212;
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 4px;
+            padding: 24px;
+            border-radius: 6px;
         }
 
         .video-container {
@@ -80,8 +85,9 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             background: #000;
+            border-radius: 4px;
         }
 
         .video-container iframe {
@@ -97,12 +103,12 @@
             width: 100%;
             height: auto;
             display: block;
-            margin-bottom: 15px;
-            border-radius: 2px;
+            margin-bottom: 16px;
+            border-radius: 4px;
         }
 
         .work-info h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
         }
 
@@ -113,19 +119,22 @@
         }
 
         .news-card {
-            padding: 20px;
+            padding: 24px;
             border: 1px solid var(--border-color);
-            background: #121212;
+            background: var(--card-bg);
+            border-radius: 6px;
         }
 
         .news-card .date {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--sub-color);
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+            font-weight: 600;
         }
 
         .news-card h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 8px;
         }
 
@@ -143,13 +152,13 @@
             color: var(--text-color);
             text-decoration: none;
             margin-right: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
 
         .social-links a:hover {
-            border-bottom-color: var(--accent-color);
+            border-bottom-color: var(--text-color);
         }
 
         .copyright {
@@ -161,7 +170,10 @@
 <body>
 
     <header>
-        <h1>RAPBONG</h1>
+        <!-- 상단 좌측 로고 영역 -->
+        <a href="/" class="logo-container">
+            <img src="logo.png" alt="RAPBONG Logo">
+        </a>
         <p class="subtitle">Official Artist Archive & Media Portfolio</p>
     </header>
 
@@ -180,7 +192,7 @@
 
             <div class="work-item">
                 <div class="image-container">
-                    <img src="https://via.placeholder.com/1200x800/1e1e1e/ffffff?text=RAPBONG+ARTWORK" alt="Artwork Image">
+                    <img src="https://via.placeholder.com/1200x800/f0f0f0/666666?text=RAPBONG+ARTWORK" alt="Artwork Image">
                 </div>
                 <div class="work-info">
                     <h3>Title of Painting Artwork</h3>
@@ -195,7 +207,7 @@
         <div class="news-card">
             <div class="date">UPCOMING / CURRENT</div>
             <h3>Upcoming Solo Exhibition / Public Art Project</h3>
-            <p style="font-size: 0.9rem; color: var(--sub-color);">상세 전시 일정 및 장소 정보가 업데이트될 예정입니다.</p>
+            <p style="font-size: 0.85rem; color: var(--sub-color);">상세 전시 일정 및 장소 정보가 업데이트될 예정입니다.</p>
         </div>
     </section>
 
